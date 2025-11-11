@@ -24,8 +24,8 @@ const WhyChooseUs = () => {
             >
                 {/* Section Title */}
                 <div className="flex items-center justify-center md:justify-start gap-4">
-                    <span className="inline-block bg-[#e21e28] h-[3px] w-[50px] rounded-full"></span>
-                    <h2 className="text-[24px] sm:text-[28px] font-semibold tracking-wide uppercase">
+                    <span className="md:inline-block hidden bg-[#e21e28] h-[3px] w-[50px] rounded-full"></span>
+                    <h2 className="text-[18px] font-semibold tracking-wide uppercase">
                         Why Choose Us
                     </h2>
                 </div>
@@ -45,8 +45,6 @@ const WhyChooseUs = () => {
 
                 {/* Button */}
                 <button
-                    data-aos="fade-up"
-                    data-aos-delay="200"
                     className="relative overflow-hidden bg-[#e21e28] text-white font-semibold py-3 px-8 rounded-md group transition-all duration-500 cursor-pointer"
                 >
                     <span className="absolute inset-0 bg-[#ffcc01] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
