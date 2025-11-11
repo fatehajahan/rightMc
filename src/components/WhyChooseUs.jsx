@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
                 <button
                     data-aos="fade-up"
                     data-aos-delay="200"
-                    className="relative overflow-hidden bg-[#e21e28] text-white font-semibold py-3 px-8 rounded-md group transition-all duration-500"
+                    className="relative overflow-hidden bg-[#e21e28] text-white font-semibold py-3 px-8 rounded-md group transition-all duration-500 cursor-pointer"
                 >
                     <span className="absolute inset-0 bg-[#ffcc01] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
                     <span className="relative z-10 group-hover:text-black transition-colors duration-500">
