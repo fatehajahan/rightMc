@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { MdOutlineMenu, MdOutlineClose } from "react-icons/md";
-import logo from '../assets/logo4.png'
+import logoDesktop from '../assets/logo4.png'
+import logoMobile from '../assets/mobileLogo.png'
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
@@ -14,13 +15,21 @@ const Navbar = () => {
 
             {/* Navbar container (with centered layout) */}
             <div className="absolute top-[5px] left-0 w-full">
-                <div className="max-w-[1320px] mx-auto flex r justify-between px-6 sm:px-10 py-7.5 relative">
-                    {/* Logo */}
-                    <img
-                        src={logo}
-                        alt="Logo"
-                        className="w-[300px] sm:w-[300px] md:w-[350px] object-contain"
-                    />
+                <div className="max-w-[1320px] mx-auto flex justify-between px-6 sm:px-10 py-7.5 relative">
+                    <div className='relative'>
+                        {/* Logo for desktop */}
+                        <img
+                            src={logoDesktop}
+                            alt="Logo"
+                            className="hidden sm:block w-[350px] object-contain"
+                        />
+                        {/* Logo for Mobile */}
+                        <img
+                            src={logoMobile}
+                            alt="Logo"
+                            className="block sm:hidden w-[130px] object-contain"
+                        />
+                    </div>
 
                     {/* Hamburger Menu Icon */}
                     <button onClick={() => setOpen(!open)} className="text-3xl text-white z-50 relative block md:hidden">

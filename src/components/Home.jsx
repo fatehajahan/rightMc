@@ -4,6 +4,7 @@ import Banner from './Banner'
 import WhyChooseUs from './WhyChooseUs'
 import Offer from './Offer'
 import Activities from './Activities'
+import Analytics from './Analytics'
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <WhyChooseUs />
             <Offer />
             <Activities />
+            <Analytics />
         </div>
     )
 }
