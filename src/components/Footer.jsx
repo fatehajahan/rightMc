@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { IoMdMail, IoIosCall } from "react-icons/io";
+import { FaMapMarkedAlt, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import footerLogo from '../assets/logo4.png'
 
 const Footer = () => {
@@ -10,39 +11,64 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-black relative pt-[150px] pb-[50px] text-white">
-            {/* Footer Content */}
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-start gap-10 relative z-10">
-                {/* Left: Logo + Description + Social */}
-                <div className="flex-1">
-                    <img src={footerLogo} alt="Footer Logo" className='w-[200px] md:w-[300px] mb-4' />
-                    <p className='text-[14px] md:text-[16px] leading-relaxed'>
-                        We are pioneers in most of our efforts. So far, we developed software for major organizations across the country, including Bangladesh Post Office (BPO), Novartis (Bangladesh) Limited, Sanowara Group of Companies, Ahmadiyya Muslim Community, Islam Enterprise, ME Power Limited, Baker’s Bay.
-                    </p>
+        <footer className="bg-[#000] py-[100px]">
+            <div className="container mx-auto px-4 overflow-x-hidden">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12 md:gap-0">
 
-                    <div className="flex items-center gap-x-4 mt-6">
-                        {icons.map((item, idx) => (
-                            <div key={idx} className="relative w-[45px] h-[45px] group cursor-pointer">
-                                <div className="absolute inset-0 flex items-center justify-center text-[#e21e28] text-[28px] z-10">
-                                    {item.icon}
+                    {/* Left Section: Logo + Description + Social */}
+                    <div className="text-white">
+                        <img src={footerLogo} alt="Logo" className='w-[300px] max-w-full mb-4' />
+                        <p className='w-[600px] max-w-full text-sm sm:text-base leading-relaxed mb-6'>
+                            We are pioneers in most of our efforts. Our software speaks about us, and we have served some of the biggest and most successful organizations across the country, including Bangladesh Post Office (BPO), Novartis (Bangladesh) Limited, Sanowara Group of Companies, Ahmadiyya Muslim Community, Islam Enterprise, ME Power Limited, Baker’s Bay.
+                        </p>
+
+                        <div className="flex items-center gap-4 cursor-pointer">
+                            {icons.map((item, idx) => (
+                                <div key={idx} className="relative w-[45px] h-[45px] group">
+                                    <div className="absolute inset-0 flex items-center justify-center text-[#e21e28] text-[28px] sm:text-[32px] md:text-[36px] z-10">
+                                        {item.icon}
+                                    </div>
+                                    <div className="absolute inset-0 bg-[#ffcc01] scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-left rounded-full"></div>
+                                    <div className="absolute inset-0 flex items-center justify-center text-[#5a5a5a] text-[28px] sm:text-[32px] md:text-[36px] group-hover:text-[#5a5a5a] z-20">
+                                        {item.icon}
+                                    </div>
                                 </div>
-                                <div className="absolute inset-0 bg-[#ffcc01] scale-0 group-hover:scale-100 transition-transform duration-300 origin-bottom-left rounded-full"></div>
-                                <div className="absolute inset-0 flex items-center justify-center text-black text-[28px] group-hover:text-black z-20">
-                                    {item.icon}
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-                {/* Right: Contact Info */}
-                <div className="flex-1">
-                    <h3 className="text-[18px] md:text-[20px] font-semibold mb-4">Get In Touch</h3>
-                    <p className="text-[14px] md:text-[16px] leading-relaxed">
-                        Email: info@example.com <br />
-                        Phone: +880 1234 567 890 <br />
-                        Address: 123, Your Street, Dhaka, Bangladesh
-                    </p>
+                    {/* Right Section: Contact Info */}
+                    <div className="text-white">
+                        <div className="flex items-center justify-center md:justify-start gap-2 md:gap-4 mb-4">
+                            <span className="bg-[#e21e28] h-[3px] w-[50px] rounded-full"></span>
+                            <h2 className="text-[18px] sm:text-[20px] font-semibold tracking-wide uppercase">
+                                Get In Touch
+                            </h2>
+                            <span className="bg-[#e21e28] h-[3px] w-[50px] rounded-full"></span>
+                        </div>
+
+                        <p className='w-[450px] max-w-full text-sm sm:text-base mb-6'>
+                            Right Management Consultants deliver innovative software solutions and expert consulting services to help businesses achieve their goals efficiently. Get in touch via email, phone, or social media.
+                        </p>
+
+                        <div className="flex flex-col gap-3">
+                            <div className='flex items-center gap-3'>
+                                <FaMapMarkedAlt className='text-[25px]' />
+                                <p>351/B Khilgaon Taltola, Dhaka-1219</p>
+                            </div>
+
+                            <div className='flex items-center gap-3'>
+                                <IoMdMail className='text-[25px]' />
+                                <p>fatehajahan.dev@gmail.com</p>
+                            </div>
+
+                            <div className='flex items-center gap-3'>
+                                <IoIosCall className='text-[25px]' />
+                                <p>+880 1720-340030</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </footer>

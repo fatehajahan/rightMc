@@ -64,7 +64,7 @@ const Offer = () => {
                         {data.map((item, index) => {
                             const IconComponent = item.icon;
                             return (
-                                <div key={index} className="flex md:items-start items-center gap-4 p-3 rounded-lg transition-all duration-500 group w-full">
+                                <div key={index} className="flex md:flex-row flex-col justify-center md:items-start items-center gap-4 p-3 rounded-lg transition-all duration-500 group w-full">
                                     <div className="text-[#e21e28] text-3xl sm:text-4xl">
                                         <IconComponent />
                                     </div>

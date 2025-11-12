@@ -48,7 +48,7 @@ const Analytics = () => {
                             <p className='text-lg md:text-xl font-semibold text-white'>Projects Delivered</p>
                         </div>
                         <div className='text-white max-w-full md:max-w-xl md:text-left text-center'>
-                            <p className='text-lg md:text-2xl font-bold pb-3'>Right Management Consultancy — 100+ Projects Delivered</p>
+                            <p className='text-lg md:text-2xl font-bold pb-3'>Right Management Consultants — 100+ Projects Delivered</p>
                             <p className='text-sm md:text-base font-semibold'>
                                 With over 100 successful projects completed across web, enterprise, and legacy systems, we combine deep technical expertise (PHP, Laravel, COBOL, Visual FoxPro, dBase III, JavaScript) with practical business insight to deliver reliable, scalable solutions that drive measurable results.
                             </p>

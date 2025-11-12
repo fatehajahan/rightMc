@@ -64,19 +64,19 @@ const Banner = () => {
             </div>
             <div className="bg-[#e21e28] w-full z-50 md:block hidden">
                 <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-10">
-                    <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 py-6">
+                    <div className="flex flex-wrap justify-center gap-x-[50px] gap-y-6 py-6">
                         {data.map((item, index) => {
                             const IconComponent = item.icon; // dynamically select icon
                             return (
                                 <div
                                     key={index}
-                                    className="flex items-center gap-2 sm:gap-3 md:gap-4 group cursor-pointer"
+                                    className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4 group cursor-pointer"
                                 >
                                     {/* Icon */}
                                     <IconComponent className="text-[30px] sm:text-[35px] md:text-[40px] text-white " />
 
                                     {/* Text that scales in on hover */}
-                                    <div className="flex gap-1 sm:gap-2 origin-left scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100 transition-all duration-500">
+                                    <div className="flex gap-1 sm:gap-2">
                                         <p className="text-[#ffcc01] font-bold text-sm sm:text-base md:text-lg">{item.id}</p>
                                         <p className="font-bold text-sm sm:text-base md:text-lg text-white">{item.title}</p>
                                     </div>

@@ -18,3 +18,7 @@
         padding-inline: 120px;
     }
 }
+
+html {
+  scroll-behavior: smooth;
+}

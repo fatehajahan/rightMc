@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { MdOutlineMenu, MdOutlineClose } from "react-icons/md";
 import logoDesktop from '../assets/logo4.png'
 import logoMobile from '../assets/mobileLogo.png'
@@ -6,24 +6,42 @@ import logoMobile from '../assets/mobileLogo.png'
 const Navbar = () => {
     const [open, setOpen] = useState(false)
     const [active, setActive] = useState('Home')
+    const [isSticky, setIsSticky] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsSticky(true)
+            } else {
+                setIsSticky(false)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     return (
-        <div className="relative w-full z-50">
-            {/* Color bars (Full Width) */}
+        <div
+            className={`w-full z-50 fixed top-0 left-0 transition-all duration-500 ${isSticky
+                    ? 'bg-[#000]/90 shadow-[0_50px_40px_rgba(0,0,0,0.5)] backdrop-blur-md'
+                    : 'shadow-[0_20px_50px_rgba(0,0,0,0.4)]'
+                }`}
+        >
+            {/* Color bars */}
             <div className="bg-[#ffcc01] w-full h-[25px] sm:h-[30px]"></div>
             <div className="bg-[#e21e28] w-full h-[50px] sm:h-[50px]"></div>
 
-            {/* Navbar container (with centered layout) */}
+            {/* Navbar container */}
             <div className="absolute top-[5px] left-0 w-full">
                 <div className="max-w-[1320px] mx-auto flex justify-between px-6 sm:px-10 py-7.5 relative">
+                    {/* Logo */}
                     <div className='relative'>
-                        {/* Logo for desktop */}
                         <img
                             src={logoDesktop}
                             alt="Logo"
                             className="hidden sm:block w-[350px] object-contain"
                         />
-                        {/* Logo for Mobile */}
                         <img
                             src={logoMobile}
                             alt="Logo"
@@ -31,12 +49,16 @@ const Navbar = () => {
                         />
                     </div>
 
-                    {/* Hamburger Menu Icon */}
+                    {/* Hamburger Icon */}
                     <button onClick={() => setOpen(!open)} className="text-3xl text-white z-50 relative block md:hidden">
-                        {open ? <MdOutlineClose className='text-[40px] absolute top-[-5px] right-[10px] text-black' /> : <MdOutlineMenu className='text-[40px] absolute top-[-5px] right-[10px] text-white' />}
+                        {open ? (
+                            <MdOutlineClose className='text-[40px] absolute top-[-5px] right-[10px] text-black' />
+                        ) : (
+                            <MdOutlineMenu className='text-[40px] absolute top-[-5px] right-[10px] text-white' />
+                        )}
                     </button>
 
-                    {/* Sliding Mobile Menu */}
+                    {/* Mobile Menu */}
                     <div
                         className={`fixed top-0 right-0 h-full bg-white shadow-lg w-64 transition-transform duration-500 z-40 md:hidden ${open ? 'translate-x-0' : 'translate-x-full'}`}
                     >
@@ -48,6 +70,8 @@ const Navbar = () => {
                                     onClick={() => {
                                         setActive(item)
                                         setOpen(false)
+                                        const section = document.getElementById(item.toLowerCase())
+                                        if (section) section.scrollIntoView({ behavior: 'smooth' })
                                     }}
                                 >
                                     {item}
@@ -61,7 +85,11 @@ const Navbar = () => {
                         {['Home', 'About', 'Services', 'Contact'].map((item) => (
                             <li
                                 key={item}
-                                onClick={() => setActive(item)}
+                                onClick={() => {
+                                    setActive(item)
+                                    const section = document.getElementById(item.toLowerCase())
+                                    if (section) section.scrollIntoView({ behavior: 'smooth' })
+                                }}
                                 className="relative cursor-pointer group transition duration-300"
                             >
                                 <span
@@ -81,11 +109,7 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-
                 </div>
-
-                {/* Mobile Menu */}
-
             </div>
         </div>
     )
