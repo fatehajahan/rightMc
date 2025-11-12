@@ -4,7 +4,7 @@
 @utility container {
     padding-inline: 10px;
     margin-inline: auto;
-    center : true;
+    center: true;
 
     @variant sm {
         padding-inline: 20px;
@@ -20,5 +20,9 @@
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+@theme {
+    --background-image-about: url('../src/assets/aboutUs.png');
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import choosePht from "../assets/whyChooseUs.jpeg";
+import { Link } from "react-router-dom";
 
 const WhyChooseUs = () => {
     useEffect(() => {
@@ -49,7 +50,9 @@ const WhyChooseUs = () => {
                 >
                     <span className="absolute inset-0 bg-[#ffcc01] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
                     <span className="relative z-10 group-hover:text-black transition-colors duration-500">
-                        Learn More
+                        <Link to="/learn-more-about-us">
+                            Learn More
+                        </Link>
                     </span>
                 </button>
             </div>

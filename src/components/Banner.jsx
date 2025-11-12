@@ -5,6 +5,7 @@ import { GrUserExpert } from "react-icons/gr";
 import { MdOutlineSettings } from "react-icons/md";
 import SplitText from "../SplitText";
 import banner from '../assets/achievements/banner.jpg'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     const handleAnimationComplete = () => {
@@ -53,7 +54,9 @@ const Banner = () => {
                     </p>
 
                     <button className='mt-[20px] cursor-pointer relative text-white font-medium py-[10px] group'>
-                        Learn More about us
+                        <Link to="/learn-more-about-us">
+                            Learn More about us
+                        </Link>
                         <span className='absolute left-0 top-0 w-full h-[2px] bg-[#ffcc01] scale-x-[0.1] transition-transform group-hover:scale-x-100 origin-left duration-500'></span>
 
                         <span className='absolute right-0 bottom-0 w-full h-[2px] bg-[#ffcc01] scale-x-[0.1] transition-transform group-hover:scale-x-100 origin-right duration-500'></span>
@@ -62,7 +65,7 @@ const Banner = () => {
 
 
             </div>
-            <div className="bg-[#e21e28] w-full z-50 md:block hidden">
+            <div className="bg-[#e21e28] w-full z-50 hidden lg:block">
                 <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-10">
                     <div className="flex flex-wrap justify-center gap-x-[50px] gap-y-6 py-6">
                         {data.map((item, index) => {
