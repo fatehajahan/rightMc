@@ -39,7 +39,7 @@ const Analytics = () => {
     }, []);
 
     return (
-        <div data-aos="fade-up" className='pb-24 px-4 md:px-0'>
+        <div data-aos="fade-up" className='pb-[100px] px-4 md:px-0'>
             <div className="container mx-auto">
                 <div className='flex flex-col md:flex-row md:justify-center gap-8 md:gap-x-12'>
                     <div className='bg-[#e21e28] flex flex-col md:flex-row items-center md:items-start justify-between md:w-[1000px] p-6 md:p-10 rounded-lg'>
