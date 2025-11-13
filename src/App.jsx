@@ -7,13 +7,13 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home";
 import LearnMore from "./components/LearnMore";
+import MoreOffer from "./components/MoreOffer";
 import ScrollToTop from "./ScrollToTop";
-import MoreOffer from "./components/moreOffer";
 
 const Layout = () => {
   return (
     <>
-      <ScrollToTop />  {/* Scrolls to top on route change */}
+      <ScrollToTop /> 
       <Outlet />
     </>
   );
