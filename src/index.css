@@ -25,4 +25,5 @@ html {
 
 @theme {
     --background-image-about: url('../src/assets/aboutUs.png');
+    --background-image-services: url('../src/assets/aboutUs.png');
 }
