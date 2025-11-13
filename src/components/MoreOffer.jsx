@@ -74,7 +74,7 @@ const MoreOffer = () => {
             <span className="absolute inset-0 bg-[#ffcc01] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
             <span className="relative z-10 group-hover:text-black transition-colors duration-500">
               <Link to="/">
-                Go Back
+                Back to HomePage
               </Link>
             </span>
           </button>
