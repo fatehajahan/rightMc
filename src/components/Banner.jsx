@@ -32,7 +32,7 @@ const Banner = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"></div>
 
                 {/* Text Content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8 md:py-0 py-[180px]">
                     <h1 className='text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold drop-shadow-[0_0_8px_rgba(0,0,0,0.8)] leading-snug'>HELLO-</h1>
                     <SplitText
                         text="Welcome to Right Management Consultants"
@@ -53,7 +53,7 @@ const Banner = () => {
                         Empowering your business with expert solutions and strategic insights.
                     </p>
 
-                    <button className='mt-[20px] cursor-pointer relative text-white font-medium py-[10px] group'>
+                    <button className='mt-[20px] cursor-pointer relative text-white font-medium py-[10px] group md:text-[20px] text-[12px]'>
                         <Link to="/learn-more-about-us">
                             Learn More about us
                         </Link>
@@ -62,9 +62,8 @@ const Banner = () => {
                         <span className='absolute right-0 bottom-0 w-full h-[2px] bg-[#ffcc01] scale-x-[0.1] transition-transform group-hover:scale-x-100 origin-right duration-500'></span>
                     </button>
                 </div>
-
-
             </div>
+
             <div className="bg-[#e21e28] w-full z-50 hidden lg:block">
                 <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-10">
                     <div className="flex flex-wrap justify-center gap-x-[50px] gap-y-6 py-6">
@@ -89,7 +88,6 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };

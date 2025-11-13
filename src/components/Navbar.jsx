@@ -23,10 +23,7 @@ const Navbar = () => {
 
     return (
         <div
-            className={`w-full z-50 fixed top-0 left-0 transition-all duration-500 ${isSticky
-                    ? 'bg-[#000]/90 shadow-[0_50px_40px_rgba(0,0,0,0.5)] backdrop-blur-md'
-                    : 'shadow-[0_20px_50px_rgba(0,0,0,0.4)]'
-                }`}
+            className="w-full z-50 fixed top-0 left-0 transition-all duration-500 "
         >
             {/* Color bars */}
             <div className="bg-[#ffcc01] w-full h-[25px] sm:h-[30px]"></div>
@@ -34,7 +31,7 @@ const Navbar = () => {
 
             {/* Navbar container */}
             <div className="absolute top-[5px] left-0 w-full">
-                <div className="max-w-[1320px] mx-auto flex justify-between px-6 sm:px-10 py-7.5 relative">
+                <div className="md:max-w-[1320px] mx-auto flex justify-between px-6 sm:px-10 py-7.5 relative">
                     {/* Logo */}
                     <div className='relative'>
                         <img
@@ -59,14 +56,25 @@ const Navbar = () => {
                     </button>
 
                     {/* Mobile Menu */}
+                    {/* Mobile Menu with Overlay */}
+                    {open && (
+                        <div
+                            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-30 md:hidden"
+                            onClick={() => setOpen(false)} // closes when clicking outside
+                        ></div>
+                    )}
+
                     <div
-                        className={`fixed top-0 right-0 h-full bg-white shadow-lg w-64 transition-transform duration-500 z-40 md:hidden ${open ? 'translate-x-0' : 'translate-x-full'}`}
+                        className={`fixed top-0 right-0 h-full bg-white shadow-lg w-64 transition-transform duration-500 z-40 md:hidden ${open ? 'translate-x-0' : 'translate-x-full'
+                            }`}
+                        onClick={(e) => e.stopPropagation()} // stops closing when clicking inside
                     >
                         <ul className="flex flex-col p-6 pt-24 text-gray-700 font-medium space-y-6">
                             {['Home', 'About', 'Services', 'Contact'].map((item) => (
                                 <li
                                     key={item}
-                                    className={`transition duration-300 cursor-pointer ${active === item ? 'text-[#e21e28]' : 'hover:text-[#e21e28]'}`}
+                                    className={`transition duration-300 cursor-pointer ${active === item ? 'text-[#e21e28]' : 'hover:text-[#e21e28]'
+                                        }`}
                                     onClick={() => {
                                         setActive(item)
                                         setOpen(false)
@@ -79,6 +87,7 @@ const Navbar = () => {
                             ))}
                         </ul>
                     </div>
+
 
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex gap-10 text-[18px] font-semibold absolute right-0 top-[40px] text-white">
