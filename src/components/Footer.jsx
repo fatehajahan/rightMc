@@ -22,7 +22,7 @@ const Footer = () => {
                             We are pioneers in most of our efforts. Our software speaks about us, and we have served some of the biggest and most successful organizations across the country, including Bangladesh Post Office (BPO), Novartis (Bangladesh) Limited, Sanowara Group of Companies, Ahmadiyya Muslim Community, Islam Enterprise, ME Power Limited, Baker’s Bay.
                         </p>
 
-                        <div className="flex items-center gap-4 cursor-pointer">
+                        <div className="hidden items-center gap-4 cursor-pointer">
                             {icons.map((item, idx) => (
                                 <div key={idx} className="relative w-[45px] h-[45px] group">
                                     <div className="absolute inset-0 flex items-center justify-center text-[#e21e28] text-[28px] sm:text-[32px] md:text-[36px] z-10">
@@ -54,7 +54,7 @@ const Footer = () => {
                         <div className="flex flex-col gap-3">
                             <div className='flex items-center gap-3'>
                                 <FaMapMarkedAlt className='text-[25px]' />
-                                <p>351/B Khilgaon Taltola, Dhaka-1219</p>
+                                <p>89 Arambag, Suit no. 303, Motijheel, Dhaka-1000</p>
                             </div>
 
                             <div className='flex items-center gap-3'>

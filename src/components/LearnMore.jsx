@@ -48,7 +48,7 @@ const LearnMore = () => {
     {
       id: 5,
       title: "Expertise",
-      desc: "Our skilled professionals bring deep domain knowledge and years of experience to every project we undertake.",
+      desc: "Our skilled professionals bring deep knowledge and years of experience; from DOS/UNIX environment to modern web environment.",
       icon: FaBrain,
     },
     {
@@ -95,25 +95,25 @@ const LearnMore = () => {
               <p className="text-gray-700 leading-relaxed mb-5 text-[17px]">
                 <span className="font-semibold text-[#e21e28]">Right Management Consultants</span>
                 {" "}is a trusted technology partner with a proven history of delivering
-                <span className="font-semibold text-[#e21e28]"> 100+ successful projects</span>
+                <span className="font-semibold text-[#e21e28]"> 100+ successful projects</span> {" "}
                 worldwide. We specialize in transforming business challenges into scalable digital
-                solutions with precision, reliability, and innovation.
+                solutions with precision, reliability, and always try to keep in mind time, place & situation.
               </p>
 
               <p className="text-gray-700 leading-relaxed mb-5 text-[17px]">
                 Our expert team works across diverse technologies such as{" "}
                 <span className="font-medium text-gray-900">
-                  PHP, Laravel, COBOL, Visual FoxPro, dBase III, and JavaScript
+                  PHP, Laravel, COBOL, Visual FoxPro, dBase III, JavaScript and we are always interested to learn new technology. {" "}
                 </span>
-                , offering complete development, modernization, and integration services
-                tailored to your organization’s goals.
+                We offer complete development, modernization, and integration services
+                tailored to your organization’s vision.
               </p>
 
               <p className="text-gray-700 leading-relaxed text-[17px]">
                 At <span className="font-semibold text-[#e21e28]">Right Management Consultants</span>,
                 we prioritize trust, transparency, and performance. Through collaboration and
                 cutting-edge expertise, we empower businesses to thrive in the ever-evolving
-                digital landscape.
+                digital eco-system.
               </p>
             </div>
 
@@ -151,7 +151,7 @@ const LearnMore = () => {
               Right Management Consultants
             </span>
             , our mission is to empower organizations through innovative, reliable,
-            and result-driven software and IT solutions.
+            and result-oriented software and relevent solutions.
           </p>
 
           {/* Mission Cards */}
