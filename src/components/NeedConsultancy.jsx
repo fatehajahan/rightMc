@@ -5,14 +5,14 @@ import "aos/dist/aos.css";
 
 const NeedConsultancy = () => {
     useEffect(() => {
-            AOS.init({
-                duration: 1000,
-                easing: "ease-in-out",
-                once: false,
-                mirror: false,
-                offset: 120,
-            });
-        }, []);
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: false,
+            mirror: false,
+            offset: 120,
+        });
+    }, []);
     return (
         <div data-aos="fade-up" className="w-full flex justify-center pb-[100px]">
             <div className="w-[90%] md:w-[1000px] bg-[#ffcc01] rounded-lg p-6 md:p-10 shadow-lg">
@@ -30,12 +30,19 @@ const NeedConsultancy = () => {
                     Call Us Today!
                 </p>
                 <div className='flex justify-center'>
-                    <button className="relative overflow-hidden bg-[#e21e28] text-white font-semibold py-3 px-8 rounded-md group transition-all duration-500 cursor-pointer">
-                        <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
-                        <span className="relative z-10 group-hover:text-black transition-colors duration-500">
-                            Call Now!
-                        </span>
-                    </button>
+                    <a
+                        href="https://wa.me/+8801720340030"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <button className="relative overflow-hidden bg-[#e21e28] text-white font-semibold py-3 px-8 rounded-md group transition-all duration-500 cursor-pointer">
+                            <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
+                            <span className="relative z-10 group-hover:text-black transition-colors duration-500">
+                                Chat on WhatsApp
+                            </span>
+                        </button>
+                    </a>
+
                 </div>
             </div>
         </div>
