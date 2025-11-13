@@ -8,25 +8,25 @@ const Activities = () => {
     {
       id: 1,
       image: activity1,
-      title: 'Workshop on Digital Proficiency and Security | ICT Ministry',
+      title: 'Software Renewal Agreement',
       description:
-        'Digital Proficiency and Security measures are critical for both private and public sector organizations. Recognizing the importance of these elements,...',
+        'Right Management Consultants has officially signed the Postal Life Insurance Software Renewal Agreement with the Bangladesh Post Office. This partnership reinforces our commitment to providing reliable, secure, and efficient software solutions that support the digital transformation of national postal services.',
       date: 'June 2, 2024',
     },
     {
       id: 2,
       image: activity2,
-      title: 'Infocom Dhaka Summit-2024',
+      title: 'Recognition of Excellence',
       description:
-        'Exciting Times for Goinnovior Limited! Our management team recently had the privilege of attending the prestigious “Infocom Dhaka Summit-2024” at...',
+        'The honorable Director General of Bangladesh Post Office extended heartfelt congratulations to the CEO of Right Management Consultants for successfully developing a comprehensive digital system for the organization. This achievement marks a significant milestone in modernizing postal operations across Bangladesh.',
       date: 'May 27, 2024',
     },
     {
       id: 3,
       image: activity3,
-      title: 'Let’s go Next: Cybersecurity Redefined.',
+      title: 'Resettlement Planning (EQMS)',
       description:
-        'Thrilled to have been part of Kaspersky’s remarkable event, delving deep into the latest insights. Gratitude for the enriching discussions...',
+        'In collaboration with EQMS, we held a comprehensive meeting with the Water Development Board to discuss the implementation of the Resettlement Action Plan. The session emphasized strategic coordination, stakeholder engagement, and the development of a clear framework to ensure smooth and sustainable project execution.',
       date: 'May 5, 2024',
     },
   ]

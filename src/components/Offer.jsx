@@ -6,6 +6,7 @@ import { TbWorld } from "react-icons/tb";
 import { MdComputer } from "react-icons/md";
 import { IoIosSettings } from "react-icons/io";
 import { MdSupportAgent } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Offer = () => {
     useEffect(() => {
@@ -82,7 +83,9 @@ const Offer = () => {
                     >
                         <span className="absolute inset-0 bg-[#ffcc01] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
                         <span className="relative z-10 group-hover:text-black transition-colors duration-500">
-                            See More
+                            <Link to="/more-offer">
+                                See More Services
+                            </Link>
                         </span>
                     </button>
                 </div>

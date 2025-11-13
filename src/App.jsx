@@ -8,12 +8,13 @@ import {
 import Home from "./components/Home";
 import LearnMore from "./components/LearnMore";
 import ScrollToTop from "./ScrollToTop";
+import MoreOffer from "./components/moreOffer";
 
 const Layout = () => {
   return (
     <>
       <ScrollToTop />  {/* Scrolls to top on route change */}
-      <Outlet />      
+      <Outlet />
     </>
   );
 };
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
     <Route element={<Layout />}>
       <Route path="/" element={<Home />} />
       <Route path="/learn-more-about-us" element={<LearnMore />} />
+      <Route path="/more-offer" element={<MoreOffer />} />
     </Route>
   )
 );
