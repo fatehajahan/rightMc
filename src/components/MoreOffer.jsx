@@ -1,25 +1,31 @@
 import React, { useState } from 'react';
-import { FaCloud, FaMobileAlt, FaShieldAlt, FaChartBar, FaCogs } from 'react-icons/fa';
+import { FaCode, FaMobileAlt, FaShieldAlt, FaRegFileCode, FaCogs } from 'react-icons/fa';
+import { FaCodeMerge } from "react-icons/fa6";
+import { TbSettingsAutomation } from "react-icons/tb";
+import { BiSupport } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 const MoreOffer = () => {
   const [showMore, setShowMore] = useState(false);
   const extraServices = [
-    { id: 1, icon: FaCloud, title: 'Cloud Solutions & Migration', desc: 'Move your business to the cloud with scalable and cost-effective solutions.' },
-    { id: 2, icon: FaChartBar, title: 'Data Analytics & BI', desc: 'Transform raw data into actionable insights for smarter decisions.' },
-    { id: 3, icon: FaShieldAlt, title: 'Cybersecurity & Compliance', desc: 'Protect your business and ensure compliance with security standards.' },
-    { id: 4, icon: FaMobileAlt, title: 'Mobile App Development', desc: 'Build Android and iOS apps that seamlessly integrate with your systems.' },
-    { id: 5, icon: FaCogs, title: 'ERP & CRM Integration', desc: 'Optimize operations and customer management with modern ERP and CRM tools.' },
+    { id: 1, icon: FaCode, title: 'Software Design & Architecture', desc: 'We craft scalable and efficient software architectures tailored to each client’s operational needs. Our design approach ensures system flexibility, strong performance, and seamless user experiences across all platforms.' },
+    { id: 2, icon: FaRegFileCode, title: 'Software Development', desc: 'From concept to completion, we deliver secure and high-performing software using technologies like PHP, Laravel, COBOL, Visual FoxPro, dBase III, and JavaScript. Every solution is built to meet unique business goals and industry standards.' },
+    { id: 3, icon: FaCodeMerge, title: 'Deployment & Implementation', desc: 'Our experts handle the complete deployment process — from installation and configuration to integration and performance tuning. We ensure your systems go live smoothly, with minimal downtime and maximum efficiency.' },
+    { id: 4, icon: TbSettingsAutomation, title: 'Process Automation Solutions', desc: 'We develop intelligent automation tools to streamline repetitive business processes, boost productivity, and reduce operational costs. Our quick prototyping services help organizations visualize and test automation workflows before full-scale implementation.' },
+    { id: 5, icon: BiSupport, title: 'Maintenance & Support', desc: 'We provide ongoing maintenance, technical support, and system enhancements to ensure your software remains secure, updated, and optimized for performance at all times.' },
   ];
 
   return (
     <div className="max-w-[1320px] mx-auto px-6 py-16">
-      <h3 className="text-3xl font-bold text-[#e21e28] mb-8 text-center">Additional Services</h3>
-
-      <div className={`grid gap-8 md:grid-cols-3 transition-all duration-500 ${showMore ? 'max-h-full' : 'max-h-96 overflow-hidden'}`}>
+      <h3 className="text-2xl font-bold text-[#e21e28] mb-8">Efficient and Secure Managed IT Services for Businesses</h3>
+      <p className='pb-[70px]'>
+        At Right Management Consultants, our Managed Software Services allow businesses to outsource the management of their software systems to our expert team. As your dedicated managed services provider, we handle the ongoing monitoring, maintenance, support, and deployment of your software. Our proactive approach ensures minimal downtime, prevents potential issues, and keeps your software running efficiently and securely. <br /> <br /> Our goal is to provide businesses with a reliable and cost-effective way to manage their software systems, allowing you to focus on your core operations while we take care of development, updates, and maintenance. Below are some essential services included in our comprehensive Managed Software Services, customized to meet your business needs.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {extraServices.map(service => {
           const Icon = service.icon;
           return (
-            <div key={service.id} className="bg-white shadow-lg p-6 rounded-xl hover:shadow-2xl transition">
+            <div key={service.id} className="bg-white shadow-2xl rounded-md overflow-hidden hover:-translate-y-3 transition-transform duration-500 cursor-pointer py-[50px] px-[50px]">
               <div className="text-4xl text-[#e21e28] mb-4"><Icon /></div>
               <h4 className="text-xl font-semibold mb-2">{service.title}</h4>
               <p className="text-gray-600">{service.desc}</p>
@@ -30,10 +36,14 @@ const MoreOffer = () => {
 
       <div className="text-center mt-8">
         <button
-          onClick={() => setShowMore(!showMore)}
-          className="px-6 py-3 bg-[#e21e28] text-white rounded-full font-medium hover:bg-red-700 transition"
+          className="relative overflow-hidden bg-[#e21e28] text-white font-semibold py-3 px-8 rounded-md group transition-all duration-500 cursor-pointer mt-[25px]"
         >
-          {showMore ? 'See Less' : 'See More'}
+          <span className="absolute inset-0 bg-[#ffcc01] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></span>
+          <span className="relative z-10 group-hover:text-black transition-colors duration-500">
+            <Link to="/">
+              Go Back
+            </Link>
+          </span>
         </button>
       </div>
     </div>

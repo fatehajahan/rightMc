@@ -8,17 +8,17 @@ const LearnMore = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 bg-about bg-cover bg-center bg-no-repeat md:bg-fixed"></div>
+        <div className="absolute inset-0 bg-about bg-cover bg-center bg-no-repeat"></div>
 
         {/* Overlay Gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-transparent"></div>
 
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6">
-          <h1 className="text-white text-5xl md:text-6xl font-bold mb-5 drop-shadow-lg tracking-tight">
+          <h1 className="text-white text-2xl md:text-6xl font-bold mb-5 drop-shadow-lg tracking-tight">
             Explore Us
           </h1>
-          <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-200 text-[15px] md:text-xl max-w-2xl mx-auto leading-relaxed">
             Discover how <span className="text-[#ffcc09] font-semibold">Right Management Consultants</span>  {" "}
             delivers innovative IT and software solutions — helping businesses
             modernize and grow efficiently.
@@ -28,7 +28,7 @@ const LearnMore = () => {
 
       {/* About Section */}
       <section className="container mx-auto py-[100px] px-6 md:px-12">
-        <div className="grid md:grid-cols-2 gap-14 items-center">
+        <div className="grid md:grid-cols-2 gap-14 items-center text-center">
           {/* Left Text Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#e21e28] leading-tight">
