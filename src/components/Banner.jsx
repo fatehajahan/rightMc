@@ -32,7 +32,7 @@ const Banner = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-transparent"></div>
 
                 {/* Text Content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8 md:py-0 py-[180px]">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:px-8 md:py-0 py-[180px] md:mt-[60px]">
                     <h1 className='text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold drop-shadow-[0_0_8px_rgba(0,0,0,0.8)] leading-snug'>HELLO-</h1>
                     <SplitText
                         text="Welcome to Right Management Consultants"
