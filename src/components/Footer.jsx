@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoMdMail, IoIosCall } from "react-icons/io";
-import { FaMapMarkedAlt, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaMapMarkedAlt, FaFacebook, FaLinkedin, FaTwitter, FaRegCopyright } from "react-icons/fa";
 import footerLogo from '../assets/logo4.png'
 
 const Footer = () => {
@@ -11,10 +11,9 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-[#000] py-[100px]">
+        <footer className="bg-[#000] pt-[100px]">
             <div className="container mx-auto px-4 overflow-x-hidden">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12 md:gap-0">
-
                     {/* Left Section: Logo + Description + Social */}
                     <div className="text-white">
                         <img src={footerLogo} alt="Logo" className='w-[300px] max-w-full mb-4' />
@@ -68,7 +67,18 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-
+                </div>
+            </div>
+            <div className="bg-[#1A1A1A] py-[25px] mt-[60px]">
+                <div className="container">
+                    <p className="text-center text-gray-400 text-[15px]">
+                        Copyright 2025{" "}
+                        <span className="text-white font-semibold">
+                            <FaRegCopyright className="inline-block mb-1" />{" "}
+                            fateha_jahan
+                        </span>
+                        , All rights reserved.
+                    </p>
                 </div>
             </div>
         </footer>
