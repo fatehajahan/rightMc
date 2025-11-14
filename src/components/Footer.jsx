@@ -72,12 +72,11 @@ const Footer = () => {
             <div className="bg-[#1A1A1A] py-[25px] mt-[60px]">
                 <div className="container">
                     <p className="text-center text-gray-400 text-[15px]">
-                        Copyright 2025{" "}
+                        Designed, Developed by {" "}
                         <span className="text-white font-semibold">
                             <FaRegCopyright className="inline-block mb-1" />{" "}
                             fateha_jahan
                         </span>
-                        , All rights reserved.
                     </p>
                 </div>
             </div>
