@@ -10,7 +10,7 @@ import NeedConsultancy from './NeedConsultancy'
 
 const Home = () => {
     return (
-        <div>
+        <div className='overflow-x-hidden'>
             <Navbar />
             <div id="home">
                 <Banner />

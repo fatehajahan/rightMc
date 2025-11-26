@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { MdOutlineMenu, MdOutlineClose } from "react-icons/md";
 import logoDesktop from '../assets/logo4.png'
 import logoMobile from '../assets/mobileLogo.png'
+import headerImg from '../assets/header.png'
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
@@ -26,8 +27,14 @@ const Navbar = () => {
             className="w-full z-50 fixed top-0 left-0 transition-all duration-500 "
         >
             {/* Color bars */}
-            <div className="bg-[#ffcc01] w-full h-[25px] sm:h-[30px]"></div>
-            <div className="bg-[#e21e28] w-full h-[50px] sm:h-[50px]"></div>
+            <div className="shadow-[0_35px_90px_rgba(0,0,0,0.45)]">
+                <div className="bg-[#ffcc01] w-full h-[25px] sm:h-[30px]"></div>
+                <div className="bg-[#e21e28] w-full h-[50px] sm:h-[50px]"></div>
+            </div>
+
+            <div>
+                {/* <img src={headerImg} alt="" /> */}
+            </div>
 
             {/* Navbar container */}
             <div className="absolute top-[5px] left-0 w-full">
