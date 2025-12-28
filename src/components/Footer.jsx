@@ -53,7 +53,7 @@ const Footer = () => {
                         <div className="flex flex-col gap-3">
                             <div className='flex items-center gap-3'>
                                 <FaMapMarkedAlt className='text-[25px]' />
-                                <p>89 Arambag, Suit no. 303, Motijheel, Dhaka-1000</p>
+                                <p>89 Arambag, Suite no. 303, Motijheel, Dhaka-1000</p>
                             </div>
 
                             <div className='flex items-center gap-3'>
